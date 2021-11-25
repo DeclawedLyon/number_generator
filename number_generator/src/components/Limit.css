@@ -19,8 +19,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: 60px;
-  border: 5px solid indianred;
   font-size: 1.5em;
+  border-bottom: 5px solid #189AB4;
 }
 #max-limit {
   padding-left: 10px;

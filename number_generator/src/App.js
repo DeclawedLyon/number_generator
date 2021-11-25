@@ -8,29 +8,30 @@ function App() {
   const [ maxLimit, setMaxLimit ] = useState(10000);
   const [ generatedNumbers, setGeneratedNumbers ] = useState([])
   const [ numberCount, SetNumberCount ] = useState(0);
-  const input = document.querySelectorAll('input');
-  for(let i=0; i<input.length; i++){
-      input[i].setAttribute('size',input[i].getAttribute('placeholder').length);
-  }
 
   const generateNumbers = (minimum, maximum) => {
+    // insure inputs are numbers and not strings.
     const min = parseInt(minimum)
     const max = parseInt(maximum)
-    console.log(`min: ${parseInt(min)}\nmax: ${max}`)
     const numbers = [];
-    let count = 1;
+    // keeps count of numbers to be displayed later
+    let count = 0;
     
+    // insures list of numbers stays within range
     while(numbers.length < (max - min)) {
       const x = Math.floor(Math.random() * (max - min +1)) + min;
+      // insures only 1 of each number may exist within the array
       if(max === min) {
         numbers.push(min)
+        count = count + 1;
       }
       else if(!numbers.includes(x) && (x < max && x > min)) {
         numbers.push({id: count, number: x})
+        count = count + 1;
       }
-      count++
+
     }
-    // console.log("App.js\n", numbers)
+    // stores variables in state
     setGeneratedNumbers(numbers)
     SetNumberCount(count)
   }
@@ -52,6 +53,7 @@ function App() {
           maxLimit={maxLimit}
           setMinLimit={setMinLimit}
           setMaxLimit={setMaxLimit}
+          count={numberCount}
           generateNumbers={generateNumbers}
         />
       </div>

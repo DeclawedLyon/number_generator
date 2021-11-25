@@ -1,6 +1,8 @@
-
 .popup-box {
   display: flex;
   justify-content: center;
   border: 5px solid sienna
+}
+#count {
+  text-align: end;
 }
