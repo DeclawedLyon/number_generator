@@ -1,0 +1,46 @@
+#limits-display {
+  border-top: none;
+  border-bottom: none;
+  width: 500px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#limit-range {
+  display: flex;
+  width: 506px;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid black;
+}
+.range {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+  border: 5px solid indianred;
+  font-size: 1.5em;
+}
+#max-limit {
+  padding-left: 10px;
+  max-width: 100px;
+  text-align: center;
+  font-size: 1em;
+  border: none;
+}
+#min-limit {
+  padding-left: 10px;
+  max-width: 100px;
+  text-align: center;
+  font-size: 1em;
+  border: none;
+}
+#number-generator {
+  width: 503px;
+  font-size: 2em;
+  color: white;
+  background: #05445E;
+  border: none;
+  border-left: 30px solid #05445E;  
+}
